@@ -7,7 +7,7 @@ services:
       - 8088:3306
     environment:
       - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=test
+      - MYSQL_DATABASE=products
       - MYSQL_USER=user
       - MYSQL_PASSWORD=pass
     volumes:

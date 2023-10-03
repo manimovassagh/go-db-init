@@ -8,9 +8,10 @@ import (
 	"gorm.io/gorm"
 )
 
-var Repository *gorm.DB 
-func DBInit() (*gorm.DB) {
-	dsn := "user:pass@tcp(127.0.0.1:8088)/test?charset=utf8mb4&parseTime=True&loc=Local"
+var Repository *gorm.DB
+
+func DBInit() *gorm.DB {
+	dsn := "user:pass@tcp(127.0.0.1:8088)/products?charset=utf8mb4&parseTime=True&loc=Local"
 	var err error
 
 	Repository, err = gorm.Open(mysql.Open(dsn), &gorm.Config{})

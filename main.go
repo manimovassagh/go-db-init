@@ -10,6 +10,16 @@ func init() {
 	databaseinit.DBInit()
 }
 func main() {
-	p := models.Product{Code: "Is really fun 2", Price: 66}
-	databaseinit.Repository.Create(&p)
+	//create a list of products for me
+	products := []models.Product{
+		{Code: "Is really fun", Price: 66},
+		{Code: "Is really fun 2", Price: 66},
+		{Code: "Is really fun 3", Price: 66},
+		{Code: "Is really fun 3", Price: 66},
+		{Code: "Is really fun 3", Price: 66},
+		{Code: "Is really fun 3", Price: 66},
+		{Code: "Is really fun 3", Price: 66},
+	}
+	databaseinit.Repository.Create(&products)
+
 }
