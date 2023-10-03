@@ -22,7 +22,7 @@ func DBInit() *gorm.DB {
 
 	fmt.Println("Database connected successfully")
 	Repository.Migrator().DropTable(&models.Product{})
-	
+
 	Repository.AutoMigrate(&models.Product{}) // Assuming "models.Product" is defined in your models package
 
 	return Repository
