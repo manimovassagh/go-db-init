@@ -6,12 +6,10 @@ import (
 )
 
 func init() {
-
 	db.DBInit()
 }
 func main() {
 	//create a list of 10 sample products for me
-
 	products := []models.Product{
 		{Code: "P1", Price: 1000, Case: "Electronics", Amount: 50},
 		{Code: "P2", Price: 500, Case: "Electronics", Amount: 100},
